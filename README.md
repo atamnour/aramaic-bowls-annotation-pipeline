@@ -51,7 +51,7 @@ Letter crops, binary masks, metadata, and visual summaries
 ```
 
 <p align="center">
-  <img src="docs/assets/original_bowl.png" alt="Original Aramaic bowl sample" width="20 %">
+  <img src="docs/assets/original_bowl.png" alt="Original Aramaic bowl sample" width="20%">
   <img src="docs/assets/text_line_localization.png" alt="Text-line localization example" width="20%">
   <img src="docs/assets/letter_detections.png" alt="Letter detections example" width="20%">
   <img src="docs/assets/sam_segmentation.png" alt="SAM segmentation refinement example" width="20%">
