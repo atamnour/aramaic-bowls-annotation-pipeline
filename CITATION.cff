@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+title: "Aramaic Bowls Annotation Pipeline"
+message: "If you use this code, please cite the accompanying paper."
+type: software
+authors:
+  - family-names: Atamni
+    given-names: Nour
+version: 0.1.0
+date-released: 2026-05-22
+preferred-citation:
+  type: conference-paper
+  title: "Beyond Labels: Visual Invariance in Self-Supervised Learning for Aramaic Bowls"
+  authors:
+    - family-names: Atamni
+      given-names: Nour

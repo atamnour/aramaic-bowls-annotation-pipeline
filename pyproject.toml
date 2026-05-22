@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aramaic-bowls-annotation-pipeline"
+version = "0.1.0"
+description = "YOLO + SAM dataset-construction pipeline for Aramaic incantation bowl letter extraction."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+  {name = "Nour Atamni"}
+]
+keywords = ["historical documents", "aramaic bowls", "computer vision", "YOLO", "SAM", "dataset construction"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering :: Image Processing"
+]
+dependencies = [
+  "numpy>=1.23",
+  "opencv-python>=4.8",
+  "tqdm>=4.65"
+]
+
+[project.optional-dependencies]
+yolo = ["ultralytics>=8.0", "torch>=2.0", "torchvision>=0.15"]
+sam = ["segment-anything"]
+full = ["ultralytics>=8.0", "torch>=2.0", "torchvision>=0.15", "segment-anything"]
+dev = ["pytest>=7.0", "ruff>=0.4"]
+
+[project.scripts]
+aramaic-bowls-pipeline = "aramaic_bowls_pipeline.pipeline:main"
+aramaic-bowls-summary = "aramaic_bowls_pipeline.summarize_dataset:main"
+aramaic-bowls-classical = "aramaic_bowls_pipeline.classical_proposals:main"
+
+[tool.setuptools.packages.find]
+include = ["aramaic_bowls_pipeline*"]
+
+[tool.ruff]
+line-length = 120

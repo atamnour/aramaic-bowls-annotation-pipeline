@@ -1,0 +1,26 @@
+# Reference configuration for the Aramaic bowls YOLO + SAM pipeline.
+# The current CLI accepts equivalent arguments directly. This file is provided
+# as a clean record of the recommended defaults.
+
+dataset:
+  images_dirname: raw
+  masks_dirname: masks
+
+patching:
+  patch_size: 512
+  stride: 256
+  min_mask_ratio: 0.01
+
+yolo:
+  imgsz: 512
+  conf: 0.25
+  min_box_area: 200.0
+  max_box_area: 60000.0
+  min_mask_overlap: 0.1
+  nms_iou: 0.4
+  default_cls: 0
+
+sam:
+  model_type: vit_h
+  device: cuda
+  min_component_area: 20
